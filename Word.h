@@ -25,8 +25,12 @@ class Word {
 		}
 
 		bool isVowel() {
-			for (char p: this->vowels) {
-				if (this->value[this->size - 1] == p) return true;
+			int i;
+
+			for (i = 0; i < strlen(this->vowels); i++) {
+				if (this->value[this->size - 1] == this->vowels[i]) {
+					return true;
+				}
 			}
 
 			// раскомментить, если надо с русскими буквами
@@ -52,7 +56,7 @@ class Word {
 		// раскомментить, если надо с русскими буквами
 //		const char russianVowels[41] = "АУОЫИЭЯЮЁЕауоыиэяюёе";
 
-		const char vowels[21] = "AEIOUaeiou";
+		const char vowels[11] = "AEIOUaeiou";
 		int size = 0;
 		std::string value;
 };
