@@ -4,16 +4,16 @@
 
 
 //template <typename T>
-void List::push(int data) {
-//	if (this->head == nullptr) {
-//		this->head = new Node<T>(data);
-//	} else {
+//void List::push(int data) {
+////	if (this->head == nullptr) {
+////		this->head = new Node<T>(data);
+////	} else {
+////
+////	}
 //
-//	}
+//	this->size++;
+//}
 
-	this->size++;
-}
-
-int List::getSize() {
-	return this->size;
-}
+//int List::getSize() {
+//	return this->size;
+//}

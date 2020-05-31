@@ -31,7 +31,7 @@ int main() {
 
 	ifstream inputFile(input, ios::in);
 
-	List list;
+	List<int> list;
 
 	list.push(2);
 	list.push(2);

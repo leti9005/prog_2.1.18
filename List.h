@@ -5,16 +5,28 @@
 
 #include "Node.h"
 
-//template <typename T>
+template <typename T>
 class List {
 	public:
 		List() {};
-		void push(int data);
-		int getSize();
+
+		void push(T data) {
+			if (this->head == nullptr) {
+				this->head = new Node<T>(data);
+			} else {
+
+			}
+
+			this->size++;
+		};
+
+		int getSize() {
+			return this->size;
+		};
 
 	private:
 		int size = 0;
-//		Node<T> *head = nullptr;
+		Node<T> *head = nullptr;
 };
 
 
