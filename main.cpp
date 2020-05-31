@@ -3,6 +3,7 @@
 #include <fstream>
 
 #include "List.h"
+#include "Word.h"
 
 using namespace std;
 
@@ -10,38 +11,32 @@ using namespace std;
 const string input = "input.txt";
 const string output = "output.txt";
 
-//class Word {
-//	public:
-//		string get() {
-//			return this->word;
-//		}
-//
-//		Word(string word) {
-//			this->word = word;
-//		}
-//
-//	private:
-//		string word;
-//};
-
-
-
 int main() {
 	string text;
 
 	ifstream inputFile(input, ios::in);
 
-	List<string> list;
+	List<Word> vowels;
+	List<Word> consonants;
 
 	if (inputFile.is_open()) {
-		string word;
+		string text;
 
-		while (inputFile >> word) {
-			list.push(word);
+		while (inputFile >> text) {
+			Word word(text);
+
+			if (word.isVowel()) {
+				vowels.push(word);
+			} else {
+				consonants.push(word);
+			}
 		}
 
 		inputFile.close();
 	}
 
-	cout << list.getElement(10);
+	string a = vowels.getElement(0).getValue();
+
+	cout << a << endl;
+//	cout << consonants.getElement(0)->value << endl;
 }

@@ -1,3 +1,1 @@
-В тексте с символами пунктуации выделить и подсчитать количество разных слов, заканчивающихся на гласные и согласные. В этих двух группах упорядочить слова по относительному соотношению содержащихся в них согласных и гласных. Для слов с равным числом согласных и гласных упорядочить слова по алфавиту.
-
-Alo;
+That's a text that is very suitable for testing and debugging the ReplaceDelete application (sentence0). You can write some commands that will replace and delete some of the words (sentence1). (sentence2). Bika bela guba bila tupa. New sentence. Fruits I love: banana, mango, apple.
