@@ -12,10 +12,6 @@ class Word {
 			return this->size;
 		}
 
-		char getSymbol(int index) {
-			return this->value[index];
-		}
-
 		Word() {}
 
 		Word(std::string text) {
