@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include <filesystem>
 
 using namespace std;
 
-//todo: Относительный путь почему-то не работает
-const string input = "/Users/Victor/CLionProjects/prog_2.1.12/input.txt";
-const string output = "output.txt";
+//todo: Путь стартует из папки билда, поэтому такой путь
+const string input = "./../input.txt";
+const string output = "./../output.txt";
 
 int main() {
 	string text;
@@ -17,7 +18,8 @@ int main() {
 		while (getline(inputFile, text)) {
 			cout << text << endl;
 		}
+
+		inputFile.close();
 	}
 
-	inputFile.close();
 }
