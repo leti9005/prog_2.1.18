@@ -1,13 +1,12 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
-#include <filesystem>
 
 using namespace std;
 
 //todo: Путь стартует из папки билда, поэтому такой путь
-const string input = "./../input.txt";
-const string output = "./../output.txt";
+const string input = "input.txt";
+const string output = "output.txt";
 
 int main() {
 	string text;
