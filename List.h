@@ -3,13 +3,14 @@
 
 #include <iostream>
 
-//#include "Node.h"
+#include "Node.h"
 
-template <typename T>
+//template <typename T>
 class List {
 	public:
-		List();
-		void push(T data);
+		List() {};
+		void push(int data);
+		int getSize();
 
 	private:
 		int size = 0;

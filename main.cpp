@@ -31,16 +31,24 @@ int main() {
 
 	ifstream inputFile(input, ios::in);
 
-	List<int> list;
+	List list;
+
+	list.push(2);
+	list.push(2);
+
+	list.push(2);
+
+	cout << list.getSize();
+
 
 	if (inputFile.is_open()) {
 		while (getline(inputFile, text)) {
 			cout << text << endl;
-//			list.push(text);
 		}
 
 		inputFile.close();
 	}
+
 
 
 

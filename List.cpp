@@ -1,15 +1,19 @@
 #include "List.h"
-//#include "Node.h"
+
+#include "Node.h"
 
 
 //template <typename T>
-//List<T>::List() {}
-//
-//template <typename T>
-//void List<T>::push(T data) {
+void List::push(int data) {
 //	if (this->head == nullptr) {
-//		this->head = 1;//new Node<T>(data);
+//		this->head = new Node<T>(data);
 //	} else {
 //
 //	}
-//}
+
+	this->size++;
+}
+
+int List::getSize() {
+	return this->size;
+}
