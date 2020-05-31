@@ -25,18 +25,32 @@ int main() {
 		while (inputFile >> text) {
 			Word word(text);
 
-			if (word.isVowel()) {
-				vowels.push(word);
-			} else {
-				consonants.push(word);
+			if (word.getSize() != 0) {
+				if (word.isLastLetterVowel()) {
+					vowels.push(word);
+				} else {
+					consonants.push(word);
+				}
 			}
+
 		}
 
 		inputFile.close();
 	}
 
-	string a = vowels.getElement(0).getValue();
 
-	cout << a << endl;
-//	cout << consonants.getElement(0)->value << endl;
+	int i = 0;
+	for (i; i < consonants.getSize(); i++) {
+		Word elem = consonants.getElement(i);
+		cout << elem.getValue() << ' ' << elem.lettersRatio() << endl;
+	}
+
+	cout << endl << endl;
+	consonants.sort();
+
+	i = 0;
+	for (i; i < consonants.getSize(); i++) {
+		Word elem = consonants.getElement(i);
+		cout << elem.getValue() << ' ' << elem.lettersRatio() << endl;
+	}
 }
