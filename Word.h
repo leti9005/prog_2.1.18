@@ -4,15 +4,8 @@
 
 class Word {
 	public:
-		std::string getValue() {
-			return this->value;
-		}
-
-		int getSize() {
-			return this->size;
-		}
-
 		Word() {}
+
 
 		Word(std::string text) {
 			int i = 0;
@@ -27,6 +20,17 @@ class Word {
 			}
 		}
 
+
+		std::string getValue() {
+			return this->value;
+		}
+
+
+		int getSize() {
+			return this->size;
+		}
+
+
 		bool isLastLetterVowel() {
 			return this->isVowel(this->value[this->size - 1]);
 		}
@@ -34,9 +38,8 @@ class Word {
 
 		float lettersRatio() {
 			float vowels = 1, consonants = 1;
-			int i;
 
-			for (i = 0; i < this->size; i++) {
+			for (int i = 0; i < this->size; i++) {
 				if (this->isVowel(this->value[i])) {
 					vowels++;
 				} else {
@@ -56,24 +59,20 @@ class Word {
 
 			this->value = newWord.getValue();
 			this->size = newWord.getSize();
+
 			return *this;
 		}
+
 
 		bool operator > (Word& right) {
 			float firstRatio = this->lettersRatio(), secondRatio = right.lettersRatio();
 
-			if (firstRatio > secondRatio) {
-				return true;
-			} else if (firstRatio < secondRatio) {
-				return false;
-			} else {
+			if (firstRatio == secondRatio) {
 				int i = 0;
 
 				while (this->value[i] != 0 && right.value[i] != 0) {
-					if ((int)this->value[i] > (int)right.value[i]) {
-						return true;
-					} else if ((int)this->value[i] < (int)right.value[i]) {
-						return false;
+					if ((int)this->value[i] != (int)right.value[i]) {
+						return (int)this->value[i] > (int)right.value[i];
 					}
 
 					i++;
@@ -82,8 +81,7 @@ class Word {
 				return false;
 			}
 
-
-
+			return firstRatio > secondRatio;
 		}
 
 	private:
@@ -94,10 +92,9 @@ class Word {
 		int size = 0;
 		std::string value;
 
-		bool isVowel(char letter) {
-			int i;
 
-			for (i = 0; i < strlen(this->vowels); i++) {
+		bool isVowel(char letter) {
+			for (int i = 0; i < strlen(this->vowels); i++) {
 				if (letter == this->vowels[i]) {
 					return true;
 				}

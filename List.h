@@ -26,7 +26,7 @@ class List {
 		};
 
 
-		T getElement(int index, bool node = false) {
+		T getElement(int index) {
 			Node<T> *current = this->head;
 
 			int counter = 0;
@@ -83,10 +83,10 @@ class List {
 			b->value = temp;
 		}
 
-private:
-		int size = 0;
-		Node<T> *head = nullptr;
-		Node<T> *end = nullptr;
+	private:
+			int size = 0;
+			Node<T> *head = nullptr;
+			Node<T> *end = nullptr;
 };
 
 

@@ -7,7 +7,6 @@
 
 using namespace std;
 
-//todo: Путь стартует из папки билда, поэтому такой путь
 const string input = "input.txt";
 const string output = "output.txt";
 
