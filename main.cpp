@@ -37,19 +37,27 @@ int main() {
 		inputFile.close();
 	}
 
-
-	int i = 0;
-	for (i; i < consonants.getSize(); i++) {
-		Word elem = consonants.getElement(i);
-		cout << elem.getValue() << ' ' << elem.lettersRatio() << endl;
-	}
-
-	cout << endl << endl;
+	vowels.sort();
 	consonants.sort();
 
-	i = 0;
-	for (i; i < consonants.getSize(); i++) {
-		Word elem = consonants.getElement(i);
-		cout << elem.getValue() << ' ' << elem.lettersRatio() << endl;
+	ofstream outputFile(output);
+	if (outputFile.is_open()) {
+		outputFile << "Согласные: " << endl << endl;
+
+		for (int i = 0; i < consonants.getSize(); i++) {
+			Word elem = consonants.getElement(i);
+			outputFile << elem.getValue() << ' ' << elem.lettersRatio() << endl;
+		}
+
+		outputFile << endl;
+
+		outputFile << "Гласные: " << endl << endl;
+
+		for (int i = 0; i < vowels.getSize(); i++) {
+			Word elem = vowels.getElement(i);
+			outputFile << elem.getValue() << ' ' << elem.lettersRatio() << endl;
+		}
+
+		outputFile.close();
 	}
 }

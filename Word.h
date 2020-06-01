@@ -71,8 +71,8 @@ class Word {
 				int i = 0;
 
 				while (this->value[i] != 0 && right.value[i] != 0) {
-					if ((int)this->value[i] != (int)right.value[i]) {
-						return (int)this->value[i] > (int)right.value[i];
+					if ((int)tolower(this->value[i]) != (int)tolower(right.value[i])) {
+						return (int)tolower(this->value[i]) > (int)tolower(right.value[i]);
 					}
 
 					i++;
@@ -88,12 +88,13 @@ class Word {
 		// раскомментить, если надо с русскими буквами
 //		const char russianVowels[41] = "АУОЫИЭЯЮЁЕауоыиэяюёе";
 
-		const char vowels[11] = "AEIOUaeiou";
+		const char vowels[6] = "aeiou";
 		int size = 0;
 		std::string value;
 
 
 		bool isVowel(char letter) {
+			letter = tolower(letter);
 			for (int i = 0; i < strlen(this->vowels); i++) {
 				if (letter == this->vowels[i]) {
 					return true;

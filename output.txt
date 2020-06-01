@@ -1,0 +1,49 @@
+Согласные: 
+
+is 1
+of 1
+application 1.16667
+and 1.5
+and 1.5
+can 1.5
+for 1.5
+New 1.5
+Fruits 1.66667
+debugging 1.75
+testing 2
+text 2
+that 2
+that 2
+very 2
+will 2
+commands 2.33333
+Thats 2.5
+words 2.5
+
+Гласные: 
+
+a 0.5
+I 0.5
+You 0.666667
+banana 1
+bela 1
+Bika 1
+bila 1
+delete 1
+guba 1
+love 1
+some 1
+some 1
+suitable 1
+tupa 1
+ReplaceDelete 1.14286
+replace 1.25
+apple 1.33333
+mango 1.33333
+write 1.33333
+sentence 1.5
+sentence 1.5
+sentence 1.5
+sentence 1.5
+the 1.5
+the 1.5
