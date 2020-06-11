@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string.h>
 #include <fstream>
 
 #include "List.h"
@@ -7,8 +6,8 @@
 
 using namespace std;
 
-const string input = "input.txt";
-const string output = "output.txt";
+const char input[] = "input.txt";
+const char output[] = "output.txt";
 
 int main() {
 	string text;
